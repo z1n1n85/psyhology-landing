@@ -1,0 +1,97 @@
+//____CONSTANT
+.ustheory {
+    &__advantages_container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+.advantag_item {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:nth-child(1) &__image{
+        background-image: url("../media/ustheory1.jpg");
+    }
+    &:nth-child(2) &__image{
+        background-image: url("../media/ustheory2.jpg");
+    }
+    &:nth-child(3) &__image{
+        background-image: url("../media/ustheory3.jpg");
+    }
+    &__text {
+        text-align: center;
+    }
+}
+
+//____DESCTOP
+@media (min-width: $tabletscreen){
+    .ustheory {
+        &__container {
+            margin-top: 100px;
+        }
+        &__caption {
+            margin: 0 auto;
+            text-align: center;
+        }
+        &__subtitle {
+            width: 730px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        &__advantages_container {
+            margin-top: 80px;
+        }
+    }
+    .advantag_item {
+        width: 350px;
+        height: 400px;
+        &__image {
+            clip-path: inset(0 round 150px 0px 150px);
+            width: 255px;
+            height: 300px;
+        }
+        &__text {
+            margin-top: 50px;
+        }
+    }
+}
+
+//__MOBILE
+@media (max-width: $tabletscreen){
+    .ustheory {
+        &__container {
+            margin-top: 50px;
+        }
+        &__caption {
+            margin: 0 auto;
+            text-align: center;
+        }
+        &__subtitle {
+            margin: 30px auto;
+            text-align: center;
+        }
+        &__advantages_container {
+            margin-top: 40px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    .advantag_item {
+        width: 330px;
+        height: 400px;
+        &__image {
+            clip-path: inset(0 round 150px 0px 150px);
+            width: 255px;
+            height: 300px;
+        }
+        &__text {
+            margin-top: 40px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}

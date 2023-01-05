@@ -1,0 +1,22 @@
+//____DESCTOP
+@media (min-width: $tabletscreen){
+    .container{
+        max-width: 1320px;
+        padding: 0 100px;
+        margin: 0 auto;
+    }
+}
+
+//____TEBLET
+@media (max-width: $tabletscreen) and (min-width: $mobilescreen){
+    .container{
+        margin: 0 5vw;
+    }
+}
+
+//__MOBILE
+@media (max-width: $mobilescreen) {
+    .container{
+        margin: 0 20px;
+    }
+}

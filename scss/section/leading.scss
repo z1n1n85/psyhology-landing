@@ -1,0 +1,127 @@
+//____CONSTANT
+.leading{
+    &__container{
+        display: grid;
+    }
+    &__image{
+        grid-area: img;
+        background-image: url("../media/leading.jpg");
+        background-position-x: -80px;
+    }
+    &__text{
+        grid-area: txt;
+    }
+    &__socials{
+        grid-area: lnk;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__caption{
+        grid-area: cap;
+    }
+}
+
+.socials_link{
+    margin-top: 15px;
+    width: 150px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &#fb{
+        background-image: url("../media/flink.png");
+        &:hover{
+            background-image: url("../media/flinkhover.png");
+        }
+    }
+    &#inst{
+        background-image: url("../media/ilink.png");
+        &:hover{
+            background-image: url("../media/ilinkhover.png");
+        }
+    }
+    &#yt{
+        background-image: url("../media/ytlink.png");
+        &:hover{
+            background-image: url("../media/ytlinkhover.png")
+        }
+    }
+    &:last-child{
+        margin-right: 40px;
+    }
+}
+
+//____DESCTOP
+@media (min-width: $tabletscreen){
+    .leading{
+        &__container{
+            margin-top: 150px;
+            grid-template-areas:
+            "cap cap"
+            "img txt"
+            "img lnk";
+            grid-template-columns: 6fr 6fr;
+            column-gap: 30px;
+        }
+        &__caption{
+            margin: 0 auto 100px;
+        }
+        &__image{
+            height: 50vw;
+            min-height: 600px;
+            max-height: 700px;
+        }
+        &__socials{
+            margin-top: 20px;
+        }
+    }
+}
+
+//____TEBLET
+@media (max-width: $tabletscreen) and (min-width: $mobilescreen){
+    .leading{
+        &__container{
+            margin-top: 100px;
+            grid-template-areas:
+            "cap"
+            "img"
+            "txt"
+            "lnk";
+        }
+        &__caption{
+            margin: 0 auto 60px;
+        }
+        &__image{            
+            background-size: 850px;
+            height: 570px;
+        }
+        &__text{
+            margin-top: 30px;
+        }
+    }
+}
+
+//__MOBILE
+@media (max-width: $mobilescreen) {
+    .leading{
+        &__container{
+            margin-top: 100px;
+            grid-template-areas:
+            "cap"
+            "img"
+            "txt"
+            "lnk";
+        }
+        &__caption{
+            margin: 0 auto 60px;
+        }
+        &__image{            
+            background-size: 850px;
+            height: 570px;
+        }
+        &__text{
+            margin-top: 30px;
+        }
+    }
+}

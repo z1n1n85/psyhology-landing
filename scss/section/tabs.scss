@@ -1,0 +1,153 @@
+//____CONSTANT
+.tabs{
+    &__container input{
+        display: none;
+    }
+    &__button_container{
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        grid-area: tab;
+    }
+    &__content_container{
+        grid-area: con;
+    }
+    &__caption{
+        grid-area: cap;
+    }
+}
+
+.tab_button{
+    cursor: pointer;
+}
+
+.tab_content{
+    display: none;
+    &__caption{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    &__text{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0 25px;
+    }
+    &__text-order{
+        list-style-type: decimal;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    &__text-unorder{
+        list-style-type: disc;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+#tab1:checked ~ .tabs__content_container #modul_1,
+#tab2:checked ~ .tabs__content_container #modul_2,
+#tab3:checked ~ .tabs__content_container #modul_3,
+#tab4:checked ~ .tabs__content_container #modul_4,
+#tab5:checked ~ .tabs__content_container #modul_5,
+#tab6:checked ~ .tabs__content_container #modul_6,
+#tab7:checked ~ .tabs__content_container #modul_7,
+#tab8:checked ~ .tabs__content_container #modul_8,
+#tab9:checked ~ .tabs__content_container #modul_9{
+    display: block;
+}
+
+.tab_button{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    width: 160px;
+    background: #E0EFE5;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border: 0;
+    font-size: 24px;
+    line-height: 29px;  
+    font-weight: 400;
+    text-align: center;
+    &:hover, &:active{
+        background: $hovercolor;
+        font-weight: 700;
+        color: white;
+    }
+}
+
+#tab1:checked ~ .tabs__button_container .tab1,
+#tab2:checked ~ .tabs__button_container .tab2,
+#tab3:checked ~ .tabs__button_container .tab3,
+#tab4:checked ~ .tabs__button_container .tab4,
+#tab5:checked ~ .tabs__button_container .tab5,
+#tab6:checked ~ .tabs__button_container .tab6,
+#tab7:checked ~ .tabs__button_container .tab7,
+#tab8:checked ~ .tabs__button_container .tab8,
+#tab9:checked ~ .tabs__button_container .tab9{
+    background: $hovercolor;
+    font-weight: 700;
+    color: white;
+}
+
+
+//____DESCTOP
+@media (min-width: $tabletscreen){
+.tabs{
+    padding: 0 100px;
+    &__container{
+        background: #FFFFFF;
+        border: 2px solid #AACAB7;
+        box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 49px;
+        padding: 50px;
+        padding-left: 100px;
+        display: grid;
+        grid-template-areas:
+        "cap cap"
+        "tab con";
+        grid-template-columns: 4fr 6fr;
+        column-gap: 30px;
+    }
+    &__caption{
+        margin: 0 auto 70px;
+    }
+    &__button_container{
+        max-width: 350px;
+        justify-content: space-between;
+    }
+}
+}
+
+//____TEBLET
+@media (max-width: $tabletscreen) and (min-width: $mobilescreen){
+    .tabs{
+        &__caption{
+            width: 250px;
+            margin: 100px auto 70px;
+        }
+        &__button_container{
+            justify-content: space-around;
+        }
+    }
+}
+
+//__MOBILE
+@media (max-width: $mobilescreen) {
+    .tabs{
+        &__caption{
+            width: 250px;
+            margin: 100px auto 70px;
+        }
+        &__button_container{
+            justify-content: space-around;
+        }
+    }
+}

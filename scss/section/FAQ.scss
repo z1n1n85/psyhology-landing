@@ -1,0 +1,147 @@
+//____CONSTANT
+.FAQ{
+    &__caption {
+        text-align: center;
+    }
+    &__item + &__item{
+        margin-top: 20px;
+    }
+}
+.dropbox_button {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #E0EFE5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__text{
+        font-weight: 500;
+    }
+    &__icon {
+        background: #FFFFFF;
+        border-radius: 40px 0px;
+    }
+    &__arrow {
+        height: 30px;
+        width: 15px;
+    }
+}
+
+#dropbox1:checked ~ .FAQ__list .dropbox1 .dropbox_button__arrow,
+#dropbox2:checked ~ .FAQ__list .dropbox2 .dropbox_button__arrow,
+#dropbox3:checked ~ .FAQ__list .dropbox3 .dropbox_button__arrow,
+#dropbox4:checked ~ .FAQ__list .dropbox4 .dropbox_button__arrow,
+#dropbox5:checked ~ .FAQ__list .dropbox5 .dropbox_button__arrow,
+#dropbox6:checked ~ .FAQ__list .dropbox6 .dropbox_button__arrow,
+#dropbox7:checked ~ .FAQ__list .dropbox7 .dropbox_button__arrow,
+#dropbox8:checked ~ .FAQ__list .dropbox8 .dropbox_button__arrow{
+    transform: rotate(180deg);
+}
+
+.ansewer {
+    display: none;
+    background: #F8F8F8;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    &__text + &__text {
+        margin-top: 20px;
+    }
+}
+
+#dropbox1:checked ~ .FAQ__list .dropbox1 + .ansewer,
+#dropbox2:checked ~ .FAQ__list .dropbox2 + .ansewer,
+#dropbox3:checked ~ .FAQ__list .dropbox3 + .ansewer,
+#dropbox4:checked ~ .FAQ__list .dropbox4 + .ansewer,
+#dropbox5:checked ~ .FAQ__list .dropbox5 + .ansewer,
+#dropbox6:checked ~ .FAQ__list .dropbox6 + .ansewer,
+#dropbox7:checked ~ .FAQ__list .dropbox7 + .ansewer,
+#dropbox8:checked ~ .FAQ__list .dropbox8 + .ansewer{
+    display: block;
+}
+
+//____DESCTOP
+@media (min-width: $tabletscreen){
+    .FAQ{
+        &__container{
+            margin-top: 135px;
+        }
+        &__list {
+            width: 50vw;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 50px;
+            max-width: 730px;
+        }
+    }
+    .dropbox_button{
+        min-height: 80px;
+        padding: 25px 30px;
+        &__icon {
+            width: 70px;
+            height: 50px;
+        }
+        &__arrow {
+            margin: 10px 27px;
+        }
+    }
+}
+
+//____TEBLET
+@media (max-width: $tabletscreen) and (min-width: $mobilescreen){
+    .FAQ{
+        &__container{
+            margin-top: 115px;
+        }
+        &__list {
+            width: auto;
+            margin-right: 15px;
+            margin-left: 15px;
+            margin-top: 85px;
+        }
+    }
+    .dropbox_button{
+        min-height: 65px;
+        padding: 15px;
+        &__text{
+            max-width: 250px;
+        }
+        &__icon {
+            width: 45px;
+            height: 45px;
+        }
+        &__arrow {
+            margin: 7px 15px;
+        }
+    }
+}
+
+//__MOBILE
+@media (max-width: $mobilescreen) {
+    .FAQ{
+        &__container{
+            margin-top: 115px;
+        }
+        &__list {
+            width: auto;
+            margin-right: 15px;
+            margin-left: 15px;
+            margin-top: 85px;
+        }
+    }
+    .dropbox_button{
+        min-height: 65px;
+        padding: 15px;
+        &__text{
+            max-width: 250px;
+        }
+        &__icon {
+            width: 45px;
+            height: 45px;
+        }
+        &__arrow {
+            margin: 7px 15px;
+        }
+    }
+}

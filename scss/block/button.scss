@@ -1,0 +1,38 @@
+//____CONSTANT
+.button {
+    display: block;
+    background: $maincolor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 0;
+    &:hover{
+        background: $hovercolor;
+    }
+    &, &__text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;  
+        color: white;
+        text-align: center;
+    }
+}
+
+//____TEBLET & DESCTOP
+@media (min-width: $mobilescreen){
+    .button{
+        padding: 26px 96px;
+    }
+}
+
+//__MOBILE
+@media (max-width: $mobilescreen) {
+    .button{
+        margin: 0 20px;
+        padding: 26px 50px;
+        &, &__text{
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+}

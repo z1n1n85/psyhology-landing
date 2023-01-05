@@ -1,0 +1,70 @@
+//____CONSTANT
+.benifits2 {
+    position: relative;
+    &__background {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        background-image: url("../media/benifits3.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &__text_container {
+        background: #FFFFFF;
+        border: 3px solid #9AC1A8;
+        border-radius: 23px;
+        text-align: center;
+    }
+}
+
+//____DESCTOP
+@media (min-width: $tabletscreen){
+    .benifits2{
+        &__container{
+            margin-top: 130px;
+            margin-bottom: 500px;
+        }
+        &__background{
+            height: 900px;
+        }
+        &__text_container{
+            padding: 50px 10vw;
+            margin: 0 100px;
+        }
+    }
+}
+
+//____TEBLET
+@media (max-width: $tabletscreen) and (min-width: $mobilescreen){
+    .benifits2{
+        &__container{
+            margin-top: 85px;
+            margin-bottom: 500px;
+        }
+        &__background{
+            height: 700px;
+        }
+        &__text_container{
+            padding: 25px;
+            margin: 0 50px;
+        }
+    }
+}
+
+//__MOBILE
+@media (max-width: $mobilescreen) {
+    .benifits2{
+        &__container{
+            margin-top: 85px;
+            margin-bottom: 300px;
+        }
+        &__background{
+            height: 590px;
+        }
+        &__text_container{
+            padding: 15px;
+            margin: 0 25px;
+        }
+    }
+}

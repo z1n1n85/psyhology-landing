@@ -1,0 +1,32 @@
+// IMPORT
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+//-----------------------------
+
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'global';
+
+//-----------------------------
+
+@import 'block/button.scss';
+@import 'block/image.scss';
+@import 'block/container.scss';
+
+//-----------------------------
+
+@import 'section/head.scss';
+@import 'section/ta.scss';
+@import 'section/benifits.scss';
+@import 'section/reviews.scss';
+@import 'section/results.scss';
+@import 'section/certificate.scss';
+@import 'section/bonus.scss';
+@import 'section/tabs.scss';
+@import 'section/leading.scss';
+@import 'section/benifits2.scss';
+@import 'section/ustheory.scss';
+@import 'section/price.scss';
+@import 'section/FAQ.scss';
+
